@@ -10,18 +10,8 @@ function App() {
     url: "https://naver.com",
   };
   return (
-    <div className="App">
-      {/* <h1 style={{
-        color: "red",
-        backgroundColor: "green",
-      }}
-      >
-        Hello {name};
-        <p>{2+3}</p>
-        <a href={naver.url}>{naver.name}</a>
-      </h1> */}
+    <div>
       <Hello />
-      <div className='box'>app</div>
     </div>
   );
 }
