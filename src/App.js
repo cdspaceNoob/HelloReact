@@ -12,9 +12,9 @@ function App() {
   return (
     <div>
       {/* 동일한 컴포넌트라 하더라도 달리 관리된다. */}
-      <Hello /> 
-      <Hello />
-      <Hello />
+      <Hello age={10} /> 
+      <Hello age={20} />
+      <Hello age={30} />
     </div>
   );
 }
