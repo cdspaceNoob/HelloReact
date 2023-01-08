@@ -2,7 +2,7 @@ import dummy from "../db/data.json";
 import World from "./World";
 
 export default function Day() {
-    const day = 1;
+    const day = 3;
     const wordList = dummy.words.filter(word => (
         word.day === day)
     )
@@ -11,8 +11,8 @@ export default function Day() {
 
     return (
 
-        <div>
-
+        <>
+            <h2>Day {day}</h2>
             <table>
                 <tbody>
                     {wordList.map(word => (
@@ -23,8 +23,7 @@ export default function Day() {
                     ))}
                 </tbody>
             </table>
-
-        </div>
+        </>
 
     );
 }
