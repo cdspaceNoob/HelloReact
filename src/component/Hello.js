@@ -1,50 +1,23 @@
 import World from "./World";
 import styles from "./Hello.module.css";
+import { useState } from "react";
 
 export default function Hello() {
-    
-    function showName(){
-        console.log("Moon");
-    }
+    // let name = "moon";  // 단순히 변수일 뿐 state가 아니다.
+    const [name, setName] = useState('moon'); // 배열 구조 분해 할당. setName을 호출해서 name을 제어한다.
 
-    function showAge(age) {
-        console.log(age);
+    function changeName(){
+        // const newName = name === "moon" ? "Hong ki" : "moon";
+        console.log(name);
+        // document.getElementById("name").innerText = name;
+        setName(name === 'moon' ? 'Hong ki' : 'moon');
     }
-
-    function showAge2(){
-        console.log(14);
-    }
-
-    function showText(e){
-        console.log(e.target.value)
-    }
-
-    function showText2(text){
-        console.log(text);
-    }
-
+   
     return (
         <div>
-
-            <h1>Hello</h1>
-            <button onClick={showName}>Show Name</button>
-
-            <button onClick={()=>{showAge(14)}}>Show age with Param</button>
-            <button onClick={showAge2}>Show age with Param2</button>
-            
-            <button onClick={
-                ()=>{
-                    console.log(34);
-                }
-            }>Show Age
-            </button>
-
-            <input type="text" onChange={showText} />
-            <input type="text" onChange={(e) => {
-                const text = e.target.value;
-                showText2(text);
-            }} />
-
+            <h1>state</h1>
+            <h2 id="name">{name}</h2>
+            <button onClick={changeName}>change</button>
         </div>
     );
 
