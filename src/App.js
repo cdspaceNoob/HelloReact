@@ -2,19 +2,16 @@ import './App.css';
 import Hello from './component/Hello';
 import Welcome from './component/Welcome';
 import styles from './App.module.css';
+import Header from './component/Header';
+import DayList from './component/DayList';
+import Day from './component/Day';
 
 function App() {
-  const name = "Moon";
-  const naver = {
-    name : "네이버",
-    url: "https://naver.com",
-  };
   return (
-    <div>
-      {/* 동일한 컴포넌트라 하더라도 달리 관리된다. */}
-      <Hello age={10} /> 
-      <Hello age={20} />
-      <Hello age={30} />
+    <div className='App'>
+      <Header />
+      <DayList />
+      <Day />
     </div>
   );
 }
